@@ -11,6 +11,18 @@ handoffs:
     agent: "Spec: Bugfix"
     prompt: "Start a Kiro bugfix spec for a bug identified during AI-DLC analysis."
     send: false
+  - label: "📚 Generate ER and Docs "
+    agent: "reverse-and-docs"
+    prompt: "The project analysis is complete. Reverse Engineering projects from source code in submodules  and generate the full developer documentation for this project in sub folder `dev-docs/{project-name}`"
+    send: false
+  - label: "📚 Generate Developer Docs"
+    agent: "doc-writer"
+    prompt: "The project analysis is complete. Please generate the full developer documentation for this project in sub folder `dev-docs/{project-name}`."
+    send: false
+  - label: "📚 Generate ER "
+    agent: "base-flow"
+    prompt: "The project analysis is complete. Reverse Engineering this project from source code base in all  submodule"
+    send: false
 ---
 
 # AI-DLC Adaptive Lifecycle Agent
